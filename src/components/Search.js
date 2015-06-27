@@ -17,7 +17,7 @@ let Header = React.createClass({
   render() {
     return (
       <div className="Search row">
-        <div className="col-lg-6">
+        <div className="col-lg-12">
           <div className="input-group">
             <input ref="search"
                    type="text"
