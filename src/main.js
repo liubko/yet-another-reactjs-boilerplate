@@ -8,7 +8,7 @@ import actions from "actions/";
 let flux = new Fluxxor.Flux(stores, actions);
 
 import Router from "react-router";
-import routes from "./Router.js";
+import routes from "./Router";
 
 /*=================================
 =            For debug            =

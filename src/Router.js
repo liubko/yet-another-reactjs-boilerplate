@@ -1,10 +1,10 @@
 import React from "react/addons"; // eslint-disable-line
 import {Route, Redirect} from "react-router";
 
-import App from "./App.js";
+import App from "./App";
 
-import HomePage from "pages/HomePage.js";
-import SearchPage from "pages/SearchPage.js";
+import HomePage from "pages/HomePage";
+import SearchPage from "pages/SearchPage";
 
 export default (
   <Route name="App" path="/" handler={App}>
