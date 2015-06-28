@@ -43,10 +43,10 @@ src/
     - Repos.js (Responsible for making AJAX requests.)
   /components
     - Header.jsx (Simple, static header component rendered on all pages.)
-    - Header.less (Styles from Header.js)
+    - Header.less (Styles for Header.js)
     - RepoListItem.jsx (Single list item which represents single github repo.)
     - Search.jsx (Search input with button.)
-    - Search.less (Styles from Search.js)
+    - Search.less (Styles for Search.js)
   /pages
     - HomePage.js (Example of home page, serving as the default route.)
     - SearchPage.js (Example of search page to demonstrate flux flow)
