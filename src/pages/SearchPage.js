@@ -1,6 +1,8 @@
 import React from "react/addons";
 let { PureRenderMixin } = React.addons;
-import Fluxxor from "fluxxor";
+
+import { connect } from "react-redux";
+import * as reposActions from "actions/repos";
 
 import Header from "components/Header";
 import Search from "components/Search";
@@ -13,25 +15,18 @@ let SearchPage = React.createClass({
 
   mixins: [
     PureRenderMixin,
-    Fluxxor.FluxMixin(React),
-    Fluxxor.StoreWatchMixin("repos")
   ],
 
-  getStateFromFlux() {
-    return {
-      repos: this.getFlux().store("repos").getRepos(),
-    };
-  },
-
   componentDidMount() {
-    this.getFlux().actions.repos.fetch("React");
+    this.props.dispatch(reposActions.fetchRepos("React"));
   },
 
   _handleSearch(query) {
-    this.getFlux().actions.repos.fetch(query);
+    this.props.dispatch(reposActions.fetchRepos(query));
   },
 
   render() {
+    let { repos } = this.props || [];
     return (
       <div className="SearchPage">
         <Header />
@@ -39,7 +34,7 @@ let SearchPage = React.createClass({
         <Search onSearch={this._handleSearch} />
 
         <div className="list-group">
-          {this.state.repos.map(r => {
+          {repos.map(r => {
             return <RepoListItem key={r.id} data={r} />;
           }) }
         </div>
@@ -48,4 +43,10 @@ let SearchPage = React.createClass({
   }
 });
 
-export default SearchPage;
+function select(state) {
+  return {
+    repos: state.repos
+  };
+}
+
+export default connect(select)(SearchPage);

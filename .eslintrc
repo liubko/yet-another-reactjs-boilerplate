@@ -186,7 +186,8 @@
     "react/no-unknown-property": 2,
     "react/prop-types": [2, {
         ignore: [
-            "children"
+            "children",
+            "dispatch"
         ]
     }],
     "react/react-in-jsx-scope": 2,

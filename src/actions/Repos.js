@@ -1,18 +1,26 @@
-import EC from "EventConstants";
+import * as AT from "../constants/ActionTypes";
 import api from "api/";
 
-export default {
-  fetch(query) {
+function receiveRepos(repos) {
+  return {
+    type: AT.FETCH_REPOS_SUCCESS,
+    repos,
+    receivedAt: Date.now()
+  };
+}
+
+export function fetchRepos(query) {
+  return dispatch => {
     if (!query) {
-      this.dispatch(EC.SERVER.FETCH_REPOS_SUCCESS, []);
+      dispatch(receiveRepos([]));
       return [];
     }
 
     return api.repos
       .fetch(query)
       .then(data => {
-        this.dispatch(EC.SERVER.FETCH_REPOS_SUCCESS, data.items);
+        dispatch(receiveRepos(data.items));
         return data;
       });
-  }
-};
+  };
+}

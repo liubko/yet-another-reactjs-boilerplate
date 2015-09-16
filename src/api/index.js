@@ -1,5 +1,5 @@
-import Repos from "./Repos";
+import repos from "./repos";
 
 export default {
-  repos: Repos
+  repos: repos
 };

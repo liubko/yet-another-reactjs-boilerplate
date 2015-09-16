@@ -1,7 +1,7 @@
 yet-another-reactjs-boilerplate
 ============
 
-A boilerplate using ReactJS (along with React Router and Fluxxor), LESS, Webpack, Babel and ESLint.
+A boilerplate using ReactJS (along with React Router and Redux), LESS, Webpack, Babel and ESLint.
 
 ---
 
@@ -22,7 +22,7 @@ A boilerplate using ReactJS (along with React Router and Fluxxor), LESS, Webpack
 This boilerplate uses the latest versions of the following libraries:
 - [ReactJS](https://github.com/facebook/react)
 - [React Router](https://github.com/rackt/react-router)
-- [Fluxxor](https://github.com/BinaryMuse/fluxxor)
+- [Redux](https://github.com/rackt/redux)
 - [LESS](https://github.com/less/less.js)
 - [Webpack](https://github.com/webpack/webpack)
 - [Babel](https://github.com/babel/babel)
