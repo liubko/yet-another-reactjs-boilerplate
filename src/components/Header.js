@@ -25,12 +25,12 @@ let Header = React.createClass({
           <ul className="nav nav-pills pull-right">
             <li role="presentation"
                 onClick={() => this.context.router.transitionTo("HomePage")}
-                className={cs({"active": currentRouteName === "HomePage"})}>
+                className={cs({active: currentRouteName === "HomePage"})}>
               <a>Home</a>
             </li>
             <li role="presentation"
                 onClick={() => this.context.router.transitionTo("SearchPage")}
-                className={cs({"active": currentRouteName === "SearchPage"})}>
+                className={cs({active: currentRouteName === "SearchPage"})}>
               <a>Search</a>
             </li>
           </ul>

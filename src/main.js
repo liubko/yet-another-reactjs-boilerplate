@@ -19,7 +19,7 @@ const createStoreWithMiddleware = redux.applyMiddleware(
 
 const store = createStoreWithMiddleware(rootReducer);
 
-/*==========  Mount application  ==========*/
+/* ==========  Mount application  ========== */
 document.addEventListener("DOMContentLoaded", () => {
   Router.run(routes, Handler => {
     React.render(
