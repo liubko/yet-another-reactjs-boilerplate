@@ -36,25 +36,25 @@ All source files are all located within `/src/`, structured in the following man
 ```
 src/
   /actions
-    - index.js (List of all actions.)
-    - Repos.js (Possible actions relevant to the list of repos.)
+    - repos.js (Possible actions relevant to the list of repositories.)
   /api
     - index.js (List of all API.)
-    - Repos.js (Responsible for making AJAX requests.)
+    - repos.js (Responsible for making AJAX requests.)
   /components
     - Header.jsx (Simple, static header component rendered on all pages.)
-    - Header.less (Styles for Header.js)
+    - Header.less (Styles for Header.js.)
     - RepoListItem.jsx (Single list item which represents single github repo.)
     - Search.jsx (Search input with button.)
-    - Search.less (Styles for Search.js)
+    - Search.less (Styles for Search.js.)
+  /constants
+    - ActionTypes.jx
   /pages
     - HomePage.js (Example of home page, serving as the default route.)
-    - SearchPage.js (Example of search page to demonstrate flux flow)
-  /stores
-    - index.js (List of all stores.)
-    - Repos.js (Responsible for storing the list of repos)
+    - SearchPage.js (Example of search page to demonstrate flux flow.)
+  /reducers
+    - index.js (Root reducer.)
+    - repos.js (Repositories reducer.)
   - App.js (It is the root component.)
-  - EventConstants.js (List of events that can be dispatched from actions)
   - main.js (Entry point for Webpack. Requires `App.js`, inits flux and running the router.)
   - Routes.js (Defines the routing structure, along with each individual route path and handler.)
 ```
