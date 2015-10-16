@@ -2,8 +2,7 @@ import React from "react/addons";
 let { PureRenderMixin } = React.addons;
 
 import { connect } from "react-redux";
-import * as reposActions from "actions/repos";
-
+import * as reposActions from "actions/Repos";
 import Header from "components/Header";
 import Search from "components/Search";
 import RepoListItem from "components/RepoListItem";

@@ -1,4 +1,4 @@
-import repos from "./repos";
+import repos from "./Repos";
 
 export default {
   repos: repos

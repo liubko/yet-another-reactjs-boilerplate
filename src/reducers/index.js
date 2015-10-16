@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import repos from "./repos";
+import repos from "./Repos";
 
 const rootReducer = combineReducers({
   repos
