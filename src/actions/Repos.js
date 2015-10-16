@@ -1,6 +1,7 @@
 import * as AT from "../constants/ActionTypes";
 import api from "api/";
 
+
 function receiveRepos(repos) {
   return {
     type: AT.FETCH_REPOS_SUCCESS,
@@ -8,6 +9,7 @@ function receiveRepos(repos) {
     receivedAt: Date.now()
   };
 }
+
 
 export function fetchRepos(query) {
   return dispatch => {
